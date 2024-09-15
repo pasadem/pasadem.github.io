@@ -5,31 +5,28 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const pages = ["Головна", "Продукти"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-function Header() {
+const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-    
   };
 
   const handleOpenProducts = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -37,7 +34,7 @@ function Header() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-    navigate('/newProduct')
+    navigate("/newProduct");
   };
 
   const handleCloseUserMenu = () => {
@@ -154,5 +151,5 @@ function Header() {
       </Container>
     </AppBar>
   );
-}
+};
 export default Header;

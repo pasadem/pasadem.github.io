@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import productsReducer from "./productsSlice.js";
-import newProductsReducer from "./newProductsSlice";
+import newProductsReducer from "./newProductsSlice.js";
 import storage from "redux-persist/lib/storage";
 import {
   persistStore,
